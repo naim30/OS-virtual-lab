@@ -25,8 +25,8 @@ You can visualise and play with the 9 sheduling algorithm on this website.
 
 ## Contribution from
 
-Naimish Lukhi
-Siddharth Patel
-Dhruvil Lathiya
-Amit Hirpara
+Naimish Lukhi,
+Siddharth Patel,
+Dhruvil Lathiya,
+Amit Hirpara,
 Parva Barot
