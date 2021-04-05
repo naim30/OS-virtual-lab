@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./Peterson.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <title>
+        Peterson Algorithm
+    </title>
+</head>
+<nav class="nav">
+    <div class="container">
+        <a class="brand-logo" href="">Home</a>
+        <input class="menu-toggle" type="checkbox" id="toggle" />
+        <label class="menu" for="toggle">menu</label>
+        <ul>
+            <!-- <li><a class="hover" href="#">home</a></li> -->
+            <li>
+                <div class="services">
+                    Concurrency <span class="fas fa-angle-down"></span>
+                    <div class="services-dropdown">
+                        <a href="#">Counting Semaphore</a>
+                        <a href="#">Lock Variable</a>
+                        <a href="#">Service-3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="services">
+                    Deadlock <span class="fas fa-angle-down"></span>
+                    <div class="services-dropdown">
+                        <a href="#">Counting Semaphore</a>
+                        <a href="#">Lock Variable</a>
+                        <a href="#">Service-3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="services" style="margin-right: 15px">
+                    Semaphore <span class="fas fa-angle-down"></span>
+                    <div class="services-dropdown">
+                        <a href="#">Counting Semaphore</a>
+                        <a href="#">Lock Variable</a>
+                        <a href="#">Service-3</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div>
+        <h1>Peterson Algorithm</h1>
+    </div>
+
+    <div class="P0" id="P000">
+        P0
+    </div>
+    <div class="P1"" id=" P001">
+        P1
+    </div>
+    <div class="Start">
+        Start
+    </div>
+    <div class="CS">
+        Critical Section
+    </div>
+    <div class="End">
+        End
+    </div>
+
+    <div class="Show">
+        <section class="output">
+
+        </section>
+    </div>
+
+    <div class="pdfLogs" style="margin-left: 650px">
+        <textarea style="font-size: 22px" name="status" id="textArea" cols="40" rows="10"></textarea>
+    </div>
+    <div class="w1">
+        Turn:
+    </div>
+    <div class="Pruce">
+         P0
+    </div>
+    <div class="w2">
+        Interest:
+    </div>
+    <div class="interestP0">
+        false
+    </div>
+    <div class="interestP1">
+        false
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="./Peterson.js"></script>
+</body>
+
+</html>

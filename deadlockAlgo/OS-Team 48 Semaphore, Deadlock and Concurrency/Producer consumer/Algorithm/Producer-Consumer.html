@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Producer Consumer
+    </title>
+    <link rel="stylesheet" href="./Producer-Consumer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+
+</head>
+<nav class="nav">
+    <div class="container">
+        <a class="brand-logo" href="../../index.html">Home</a>
+        <input class="menu-toggle" type="checkbox" id="toggle" />
+        <label class="menu" for="toggle">menu</label>
+        <ul>
+            <!-- <li><a class="hover" href="#">home</a></li> -->
+            <li>
+                <div class="services">
+                    Concurrency <span class="fas fa-angle-down"></span>
+                    <div class="services-dropdown">
+                        <a href="../../Lock Variable/home.html">Lock Variable</a>
+                        <a href="../../Strict alteration/home.html">Strict Alteration</a>
+                        <a href="../../Peterson Algorithm/home.html">Peterson's Algorithm</a>
+                        <a href="../../TSl/home.html">Test and set lock</a>
+                        <a href="../../Producer consumer/home.html">Producer and cosumer</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="services">
+                    Deadlock <span class="fas fa-angle-down"></span>
+                    <div class="services-dropdown">
+                        <a href="../../Bankers Algorithm/home.html">Bankers Algorrithm</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="services" style="margin-right: 15px">
+                    Semaphore <span class="fas fa-angle-down"></span>
+                    <div class="services-dropdown">
+                        <a href="../../Counting semaphore/home.html">Counting Semaphore</a>
+                        <a href="../../Binary semaphore/home.html">Binary Semaphore</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<body>
+
+    <h1>Producer Consumer Algorithm</h1>
+    <p>Black box cell means the respective process is produced</p>
+    <p>White box cell means the respective process is consumed</p>
+
+    <label for="NoOfProcess">No. of Process:</label>
+    <input type="text" id="NoOfProcess" name="NoOfProcess" style="background-color: transparent;border: 2px solid #1e6774; border-radius: 5px;
+    "><br><br>
+    <label for="ExecutionTime">Time to execute this processes (in ms):</label>
+    <input type="text" id="ExecutionTime" name="ExecutionTime" style="background-color: transparent;border: 2px solid #1e6774; border-radius: 5px;
+"><br><br>
+    <button id="submitButton" onclick="AcceptInput()" style="margin-left: 20px;">Visualize</button>
+    <button id="pdf" class="button_slide slide_right" id="b1" onclick="getPdf()" style="margin-left: 10px;">
+        save PDF
+    </button>
+
+    
+    <div class="pdfLogs" style="margin-left: 650px">
+        <textarea
+            style="font-size: 22px"
+            name="status"
+            id="textArea"
+            cols="40"
+            rows="10"
+        ></textarea>
+    </div>
+
+    <div class='PR'>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="./Producer-Consumer.js"></script>
+</body>
+
+</html>

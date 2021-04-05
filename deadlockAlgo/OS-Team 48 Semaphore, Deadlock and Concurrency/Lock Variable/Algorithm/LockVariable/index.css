@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* basic page styles */
+h3 {
+	position: absolute;
+}
+
+h1 {
+	position: absolute;
+	margin-top: -90px;
+	color: #0a2463;
+}
+
+body {
+	position: relative;
+	margin-top: 150px;
+	margin-left: 300px;
+
+	height: 1500px;
+
+	background-size: cover;
+	background: rgb(218,165,242);
+background: linear-gradient(335deg, rgba(218,165,242,1) 18%, rgba(181,222,251,1) 75%, rgba(144,226,243,1) 100%);
+	font-family: "Montserrat", sans-serif;
+}
+
+/* Semaphore , Suspended queue logs */
+.infoPanelHead {
+	font-weight: bold;
+	font-family: "Montserrat", sans-serif;
+	cursor: pointer;
+}
+
+/* button styles */
+
+#b0 {
+	position: absolute;
+	height: auto;
+	width: auto;
+	margin-top: 80px;
+	margin-left: 115px;
+}
+
+button {
+	background-color: transparent;
+	padding: 10px 22px;
+	text-align: center;
+	font-weight: bold;
+	color: #373a40;
+	border: 2px solid #1e6774;
+	border-radius: 5px;
+}
+
+.button_slide {
+	color: #373a40;
+	border: 2px solid #1e6774;
+	border-radius: 7px;
+	padding: 10px 22px;
+	display: inline-block;
+	font-family: "Montserrat", sans-serif;
+	/* font-size: 14px; */
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 1px;
+	box-shadow: inset 0 0 0 0 #136a6b;
+	-webkit-transition: ease-out 0.5s;
+	-moz-transition: ease-out 0.5s;
+	transition: ease-out 1s;
+}
+
+.slide_right:hover {
+	color: #fff;
+	box-shadow: inset 400px 0 0 0 #134d4e;
+}
+
+#b1 {
+	position: absolute;
+	height: auto;
+	width: auto;
+	margin-top: 135px;
+	margin-left: 115px;
+}
+
+/* image styles */
+img {
+	position: absolute;
+	margin-top: 80px;
+	margin-left: 235px;
+	width: 77px;
+	transition-duration: 2s;
+}
+
+img#p0 {
+	width: 38px;
+}
+
+img#p1 {
+	width: 38px;
+	margin-top: 135px;
+}
+
+/* main area classes and boxes */
+#main {
+	margin-top: 50px;
+	margin-left: 200px;
+}
+
+#reg {
+	position: absolute;
+	margin-top: 450px;
+	margin-left: 10px;
+}
+
+#loc {
+	position: absolute;
+	margin-top: 450px;
+	margin-left: 180px;
+}
+
+#box1,
+#box2 {
+	position: absolute;
+	border-color: #116880;
+	border-style: solid;
+	border-width: 3.5px;
+	height: 300px;
+	width: 100px;
+	margin-top: 50px;
+	border-radius: 10px;
+}
+
+#entry,
+#exit {
+	margin-top: 50px;
+	position: absolute;
+	border-color: #116880;
+	border-style: solid;
+	border-width: 3.5px;
+	height: 300px;
+	width: 100px;
+	border-radius: 10px;
+}
+
+#entry {
+	margin-left: 170px;
+}
+
+#exit {
+	margin-left: 510px;
+}
+
+#box2 {
+	border-color: #2ecc40;
+	margin-left: 340px;
+}
+
+/* #sem {
+	
+	
+} */
+
+/* After added styles for incremental button */
+#incre {
+	margin-left: -10px;
+	margin-top: 170px;
+}
+
+.infoPanel {
+	margin-left: -275px;
+	margin-top: -230px;
+}
+
+/* z index styles for divs --not important */
+.base-level {
+	position: relative;
+	z-index: 1;
+}
+.second-level {
+	margin-top: auto;
+	position: relative;
+	width: 100%;
+	z-index: 5;
+}
+
+.first-level {
+	z-index: 2;
+}
+
+/* blinking box */
+@keyframes blink {
+	50% {
+		border-color: rgb(216, 198, 198);
+	}
+}
+
+.alerts-border {
+	animation: blink 1s;
+	animation-iteration-count: infinite;
+}
+
+/* Hover button animations */
+.pulse:hover,
+.pulse:focus {
+	animation: pulse 1s;
+	box-shadow: 0 0 0 2em rgba(#fff, 0);
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 var(--hover);
+	}
+}
+
+/* Hover button animations for increment button*/
+.addingProcess {
+	padding: 10px 22px;
+	text-align: center;
+	font-weight: bold;
+	transform: translate(-50%, -50%);
+	color: #373a40;
+	/* text-decoration: none; */
+	letter-spacing: 2px;
+	transition: 0.5s;
+	border: 2px solid #1e6774;
+	border-radius: 5px;
+	outline: none;
+}
+.addingProcess:hover {
+	background: #20404e;
+	color: #fff;
+}
+.addingProcess:before {
+	content: "";
+	position: absolute;
+	top: -0.7px;
+	left: -1px;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: 1px solid #1e6774;
+}
+.addingProcess:hover:before {
+	transform: scale(1.2, 1.4);
+	opacity: 0;
+	transition: 0.5s;
+}
+
+/* tool tip animation */
+.tooltip {
+	position: absolute;
+	display: inline-block;
+	/* border-bottom: 1px dotted black; */
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	left: 50%;
+	margin-left: -250px;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: black transparent transparent transparent;
+	/* width: 100px; */
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Left tool tip */
+
+.LeftToolTip {
+	position: relative;
+	display: inline-block;
+}
+
+.LeftToolTip .Lefttooltiptext {
+	visibility: hidden;
+	width: 400px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 100%;
+	/* top: -5px; */
+	left: 50%;
+	opacity: 0;
+	margin-left: -60px;
+	transition: opacity 1s;
+	cursor: pointer;
+}
+
+.LeftToolTip:hover .Lefttooltiptext {
+	cursor: pointer;
+	visibility: visible;
+	opacity: 1;
+}
+
+/* #pdf:hover {
+	color: white;
+	background-color: #134d4e;
+} */
+
+.pdfLogs {
+	margin-left: 675px;
+}
+/* for navbar styles */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200&display=swap");
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+.nav {
+	background: rgba(0, 0, 0, 0.87);
+	padding: 15px 0;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	margin-top: -150px;
+	margin-left: -300px;
+	margin-right: -8.2px;
+	margin-bottom: 149px;
+}
+.nav:after {
+	display: block;
+	content: "";
+	clear: right;
+}
+
+.brand-logo {
+	color: #fff;
+	font-size: 20px;
+	margin-top: 100px;
+	margin-left: 20px;
+}
+input[type="checkbox"] {
+	display: none;
+}
+.menu {
+	margin: 4px;
+	padding: 5px;
+	border: 1px #fff solid;
+	position: absolute;
+	font-size: 12px;
+	color: #fff;
+	top: 10px;
+	left: 10px;
+	background: none;
+	text-transform: capitalize;
+	outline: none;
+	display: none;
+}
+ul {
+	float: right;
+	font-size: 0;
+}
+li {
+	display: inline-block;
+	font-size: 20px;
+	margin: 0 10px;
+	text-transform: capitalize;
+	color: #fff;
+	padding: 5px 0;
+}
+li:first-child {
+	margin-left: 0;
+}
+li:last-child {
+	margin-right: 0;
+}
+.services {
+	cursor: pointer;
+	padding-right: 5px;
+}
+.services:hover .services-dropdown {
+	display: block;
+	color: black;
+	cursor: pointer;
+}
+.services-dropdown {
+	display: none;
+	max-width: 200px;
+	position: absolute;
+	background: #f4f4f4;
+}
+.services-dropdown a {
+	display: block;
+	color: #000;
+	padding: 10px 15px;
+	font-size: 18px;
+}
+.services-dropdown a:hover {
+	background: #dcdcdc;
+}
+li input[type="text"] {
+	height: 20px;
+	padding: 7px 15px;
+	font-size: 15px;
+	background: #fff;
+	border: none;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.fa-search {
+	background: white;
+	color: #4a4a4a;
+	padding: 10px;
+	vertical-align: middle;
+	border: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-size: 14px;
+}
+li input[type="text"]:focus {
+	outline: none;
+}
+.hover:after {
+	display: block;
+	content: "";
+	border-bottom: 2px solid #fff;
+	transform: scaleX(0);
+	transition: transform ease-in 200ms;
+}
+.hover:hover:after {
+	transform: scaleX(1);
+}
+
+@media screen and (max-width: 1024px) {
+	.brand-logo {
+		font-size: 20px;
+		margin-left: 100px;
+	}
+	li {
+		font-size: 15px;
+		padding: 0;
+	}
+	.container {
+		width: calc(100% - 100px);
+	}
+	li input[type="text"] {
+		height: 12px;
+		font-size: 12px;
+	}
+	.fa-search {
+		font-size: 8px;
+		padding: 9px;
+		vertical-align: top;
+	}
+	.services-dropdown a {
+		font-size: 11px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.container {
+		width: calc(100% - 40px);
+	}
+	.brand-logo {
+		display: block;
+		text-align: center;
+		font-size: 1px;
+		margin-left: 20px;
+	}
+	ul {
+		display: none;
+		float: none;
+		text-align: center;
+	}
+	.fa-search {
+		font-size: 8px;
+		padding: 9px;
+		vertical-align: top;
+	}
+	.menu {
+		display: block;
+	}
+	.menu-toggle:checked ~ ul {
+		display: block;
+	}
+	li {
+		margin: 10px;
+		padding: 0;
+	}
+	li:last-child {
+		display: block;
+	}
+}
+@media screen and (max-width: 428px) {
+	li {
+		font-size: 12px;
+	}
+	.fa-search {
+		font-size: 8px;
+		padding: 9px;
+		vertical-align: top;
+	}
+}

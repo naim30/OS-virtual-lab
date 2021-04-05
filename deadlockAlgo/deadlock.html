@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeadLock and Concurrency</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chonburi&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="deadlock.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="nav">
+        <div>
+          <div class="name"><a href="../index.html">HOME</a></div>
+          <div class="logo">VIRTUAL LAB</div>
+          <div class="button">
+            <div>ABOUT US</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="image">
+          <div class="main-heading">
+            DeadLock &<br />
+            Concurrency
+          </div>
+          <div class="divider"></div>
+          <div class="main-content">
+            Deadlock describes a situation where two or more threads are blocked
+            forever, waiting for each other. Deadlock occurs when multiple
+            threads need the same locks but obtain them in different order. A
+            Java multithreaded program may suffer from the deadlock condition
+            because the synchronized keyword causes the executing thread to
+            block while waiting for the lock, or monitor, associated with the
+            specified object.
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="menu">
+          <div class="menu-heading">ALGORITHMS</div>
+          <div class="menu-item">
+            <div class="item-1">
+              <div class="deadlock">
+                <div class="theory">
+                  <p class="heading">DEADLOCK</p>
+                  <p>
+                    A deadlock occurs when a process or thread enters a waiting
+                    state because a requested system resource is held by another
+                    waiting process, which in turn is waiting for another
+                    resource held by another waiting process.
+                  </p>
+                </div>
+                <div class="al-list">
+                  <div class="li1">
+                    <div class="d1">
+                      <a
+                        href="OS-Team 48 Semaphore, Deadlock and Concurrency/Bankers Algorithm/home.html"
+                      >
+                        <p>Banker's<br />Algorithm</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item-2">
+              <div class="concurrency">
+                <div class="theory">
+                  <p class="heading">CONCURRENCY</p>
+                  <p>
+                    Concurrency is the execution of the multiple instruction
+                    sequences at the same time. It happens in the operating
+                    system when there are several process threads running in
+                    parallel. The running process threads always communicate
+                    with each other through shared memory or message passing.
+                  </p>
+                </div>
+                <div class="al-list">
+                  <div class="li1">
+                    <div class="c1">
+                      <a
+                        href="OS-Team 48 Semaphore, Deadlock and Concurrency/Lock Variable/home.html"
+                      >
+                        <p>Lock<br />Variable</p>
+                      </a>
+                    </div>
+                    <div class="c2">
+                      <a
+                        href="OS-Team 48 Semaphore, Deadlock and Concurrency/TSl/home.html"
+                      >
+                        <p>Test &<br />Set Lock</p>
+                      </a>
+                    </div>
+                    <div class="c3">
+                      <a
+                        href="OS-Team 48 Semaphore, Deadlock and Concurrency/Strict alteration/home.html"
+                      >
+                        <p>Strict<br />Alteration</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="li2">
+                    <div class="c4">
+                      <a
+                        href="OS-Team 48 Semaphore, Deadlock and Concurrency/Peterson Algorithm/home.html"
+                      >
+                        <p>Petersons<br />Algorithm</p>
+                      </a>
+                    </div>
+                    <div class="c5">
+                      <a
+                        href="OS-Team 48 Semaphore, Deadlock and Concurrency/Producer consumer/home.html"
+                      >
+                        <p>Producer &<br />Consumer</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item-3">
+              <div class="semaphore">
+                <div class="theory">
+                  <p class="heading">SEMAPHORE</p>
+                  <p>
+                    In computer science, a semaphore is a variable or abstract
+                    data type used to control access to a common resource by
+                    multiple processes in a concurrent system such as a
+                    multitasking operating system
+                  </p>
+                </div>
+                <div class="al-list">
+                  <div class="li1">
+                    <div class="s1">
+                      <a
+                        href="OS-Team 48 Semaphore, Deadlock and Concurrency/Binary semaphore/home.html"
+                      >
+                        <p>Binary <br />Semaphore</p>
+                      </a>
+                    </div>
+                    <div class="s2">
+                      <a
+                        href="OS-Team 48 Semaphore, Deadlock and Concurrency/Counting semaphore/home.html"
+                      >
+                        <p>Counting<br />Semaphore</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

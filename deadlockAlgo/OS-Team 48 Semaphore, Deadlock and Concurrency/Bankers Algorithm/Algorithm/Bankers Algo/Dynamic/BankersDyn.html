@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="./css/BankersDyn.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+		<!-- Navbar class starts here -->
+		<nav class="nav">
+			<div class="container">
+				<a class="brand-logo" href="">Home</a>
+				<input class="menu-toggle" type="checkbox" id="toggle" />
+				<label class="menu" for="toggle">menu</label>
+				<ul>
+					<!-- <li><a class="hover" href="#">home</a></li> -->
+					<li>
+						<div class="services">
+							Concurrency <span class="fas fa-angle-down"></span>
+							<div class="services-dropdown">
+								<a href="#">Counting Semaphore</a>
+								<a href="#">Lock Variable</a>
+								<a href="#">Service-3</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="services">
+							Deadlock <span class="fas fa-angle-down"></span>
+							<div class="services-dropdown">
+								<a href="#">Counting Semaphore</a>
+								<a href="#">Lock Variable</a>
+								<a href="#">Service-3</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="services" style="margin-right: 15px">
+							Semaphore <span class="fas fa-angle-down"></span>
+							<div class="services-dropdown">
+								<a href="#">Counting Semaphore</a>
+								<a href="#">Lock Variable</a>
+								<a href="#">Service-3</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</head>
+
+	<body>
+		<script src="./js/BankersDyn.js"></script>
+		<div class="myheading tooltip">
+			<p>Banker's Algorithm</p><span class="tooltiptext" style="font-size: 12px;"
+			>The banker’s algorithm is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating the allocation for predetermined maximum possible amounts of all resources, then makes an “s-state” check to test for possible activities, before deciding whether allocation should be allowed to continue.</span
+		>
+		</div>
+		    <div class="mtooltip">
+				Allocation<span class="mtooltiptext">Indicates the number of available resources of each type</span>
+			</div>
+			<div class="mtooltip">
+				Max<span class="mtooltiptext">Defines the maximum demand of each process in a system.</span>
+			</div>
+			<div class="mtooltip">
+				Available<span class="mtooltiptext">Defines the number of resources of each type currently allocated to each process</span>
+			</div>
+		<div style="margin-top: 3%" class="mainTable" style="margin: 10% 20%">
+			<table class="container" id="myTable" style="font-size: 0.8em">
+				<tr>
+					<th>No.</th>
+					<th>A</th>
+					<th>B</th>
+					<th>C</th>
+					<th>A</th>
+					<th>B</th>
+					<th>C</th>
+					<th>A</th>
+					<th>B</th>
+					<th>C</th>
+				</tr>
+				<!-- <div id="AddDeleteRow"> -->
+				<tr id="p0">
+					<th>p0</th>
+					<td><input value="0" /></td>
+					<td><input value="1" /></td>
+					<td><input value="0" /></td>
+					<td><input value="7" /></td>
+					<td><input value="5" /></td>
+					<td><input value="3" /></td>
+					<td><input value="3" /></td>
+					<td><input value="3" /></td>
+					<td><input value="2" /></td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- <p class="lol">Computing process hahahhahahah</p> -->
+		<div class="controlPanel" style="margin-left: 1350px; margin-top: -30px">
+			<button onclick="removeRow()">-</button>
+			<button onclick="addRow()" style="margin-top: 45px">+</button>
+		</div>
+		<div class="submit" style="margin-top: 50px; margin-bottom: 30px">
+			<button onclick="submitValue()" style="margin-top: 45px">submit</button>
+		</div>
+
+		<div id="printProcess" style="margin-top: 45px"></div>
+
+		<script></script>
+	</body>
+</html>

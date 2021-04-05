@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Peterson Algorithm</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
+
+  <body>
+  <h1 id="midd"><a href="https://www.javatpoint.com/os-paterson-solution" style="color:rgb(39, 90, 110)">Peterson Algorithm</a></h1>
+  <p id="def">Peterson’s solution provides a good algorithmic description of solving the critical-section problem and illustrates some of the complexities involved in designing software that addresses the requirements of mutual exclusion, progress, and bounded waiting.
+    Peterson's algorithm is considered a standard low-level algorithm for two-thread mutual exclusion.
+  </p>
+    <button id="bt" type="button"><a href="Algorithm/Peterson.html">Execute</a></button>
+    <div id="page-wraper">
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/1.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>P0 execution</h4>
+                  <p>1. Process P0 is initiated and has entered the Start state.<br/>
+                    2. Process P0 after a certain instant of time, enters Critical section.<br/>
+                    3. Since, Critical section is already occupied by Process P0, it is now time to trigger Process P1.<br/>
+                     
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>P1 Trigger</h4>
+                  <p>1. Process P1 is triggered.<br/>
+                    2. Process P1 awaits in Start state as Critical section is already occupied by Process P0.<br/>
+                    3. Process P0 has exited the Critical section and hence, Process P1 can now enter the Critical state.<br/>
+                    4. Process P1 enters the Critical section, meanwhile Process P0 executes and enters the Exit state.<br/>
+                    5. Process P1 exits the Critical section and executes to enter the Exit state and meanwhile Process P0 has completed.<br/>
+                    6. Process P1 has completed.<br/>
+                    
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/2.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Analysis of Peterson Algorithm approach</h4>
+                  <p>
+                    1.Mutual Exclusion<br/>
+                    The method provides mutual exclusion for sure. In entry section, the while condition involves the criteria for two variables therefore a process cannot enter in the critical section until the other process is interested and the process is the last one to update turn variable.<br/>
+                    <br/>
+                    2.Progress<br/>
+                    An uninterested process will never stop the other interested process from entering in the critical section. If the other process is also interested then the process will wait.<br/>
+                    <br/>
+                    3.Bounded waiting<br/>
+                    The interested variable mechanism failed because it was not providing bounded waiting. However, in Peterson solution, A deadlock can never happen because the process which first sets the turn variable will enter in the critical section for sure. Therefore, if a process is preempted after executing line number 4 of the entry section then it will definitely get into the critical section in its next chance.<br/>
+                    <br/>
+                    4.Portability<br/>
+                    This is the complete software solution and therefore it is portable on every hardware.
+                   
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/1.jpeg" alt="abc" width="150" height="500">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        </div>
+      </section>
+    </div>
+    
+  </body>
+</html>

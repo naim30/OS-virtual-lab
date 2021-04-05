@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RR</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chonburi&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="rr.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <div>
+          <div class="name"><a href="../../index.html">HOME</a></div>
+          <div class="logo">VIRTUAL LAB</div>
+          <div class="button">
+            <div>
+              <div></div>
+              MENU
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu-item">
+          <div>
+            <a href="../FCFS/fcfs.html">
+              <div class="fcfs">
+                <div class="short-title">FCFS</div>
+                <div class="long-title">
+                  First come<br />
+                  first serve
+                </div>
+              </div>
+            </a>
+            <a href="../SJF/sjf.html">
+              <div class="sjf">
+                <div class="short-title">SJF</div>
+                <div class="long-title">
+                  Shortest job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../LJF/ljf.html">
+              <div class="ljf">
+                <div class="short-title">LJF</div>
+                <div class="long-title">
+                  Longest job<br />
+                  first
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <div class="rr">
+                <div class="short-title">RR</div>
+                <div class="long-title">Round Robin</div>
+              </div>
+            </a>
+            <a href="../SRJF/srjf.html">
+              <div class="srjf">
+                <div class="short-title">SRJF</div>
+                <div class="long-title">
+                  Shortest<br />
+                  remaining job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../PP/pp.html">
+              <div class="pp">
+                <div class="short-title">PP</div>
+                <div class="long-title">
+                  Prioprity<br />
+                  ( preemptive )
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="../HRRN/hrrn.html">
+              <div class="hrrn">
+                <div class="short-title">HRRN</div>
+                <div class="long-title">
+                  Highest<br />
+                  response ratio<br />
+                  next
+                </div>
+              </div>
+            </a>
+            <a href="../LRJF/lrjf.html">
+              <div class="lrjf">
+                <div class="short-title">LRJF</div>
+                <div class="long-title">
+                  Longest<br />
+                  remaining job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../PNP/pnp.html">
+              <div class="pnp">
+                <div class="short-title">PNP</div>
+                <div class="long-title">
+                  Priority<br />
+                  ( non-preemptive )
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="theory">
+          <div class="theory-heading">
+            <div>ROUND ROBIN</div>
+            <div>R.R.</div>
+          </div>
+          <div class="theory-text">
+            <div>Basic Theory :</div>
+            <div></div>
+            <div>
+              &emsp;&emsp;In Round-robin scheduling, each ready task runs turn
+              by turn only in a cyclic queue for a limited time slice. This
+              algorithm also offers starvation free execution of processes.
+              <br />
+              &emsp;&emsp;The name of this algorithm comes from the round-robin
+              principle, where each person gets an equal share of something in
+              turns. It is the oldest, simplest scheduling algorithm, which is
+              mostly used for multitasking. One of the most commonly used
+              technique in CPU scheduling as a core. It is preemptive as
+              processes are assigned CPU only for a fixed slice of time at most.
+            </div>
+          </div>
+          <div class="theory-step">
+            <ul>
+              <label>STEP 1 :</label>
+              <li>
+                Assume that initially there are no ready processes, when the
+                first one, A, arrives. It has priority 0 to begin with. Since
+                there are no other accepted processes, A is accepted
+                immediately.
+              </li>
+              <label>STEP 2 :</label>
+              <li>
+                After a while another process, B, arrives. As long as b / a < 1,
+                B’s priority will eventually catch up to A’s, so it is accepted;
+                now both A and B have the same priority.
+              </li>
+              <label>STEP 3 :</label>
+              <li>
+                All accepted processes share a common priority (which rises at
+                rate b ); that makes this policy easy to implement i.e any new
+                process’s priority is bound to get accepted at some point. So no
+                process has to experience starvation.
+              </li>
+              <label>STEP 4 :</label>
+              <li>
+                Even if b / a > 1, A will eventually finish, and then B can be
+                accepted.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="visualizer">
+        <div class="error">Invalid Input</div>
+        <div class="container">
+          <div>
+            <div class="buttons">
+              <div class="play">PLAY</div>
+              <div class="reset">RESET</div>
+            </div>
+            <div class="time-q">
+              Time Quantum: <input type="text" id="time-q" />
+            </div>
+            <div class="avg-tat">Average TAT : <span>0</span></div>
+            <div class="avg-wt">Average WT : <span>0</span></div>
+            <div class="avg-rt">Average RT : <span>0</span></div>
+          </div>
+          <div>
+            <div class="add-process">
+              <div class="input">
+                <div class="arrival">
+                  <label for="arrival-time"> Arrival Time :</label>
+                  <input type="text" id="arrival-time" />
+                </div>
+
+                <div class="burst">
+                  <label for="burst-time">Burst Time :</label>
+                  <input type="text" id="brust-time" />
+                </div>
+              </div>
+              <div class="add">ADD</div>
+            </div>
+
+            <div class="table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>PID</th>
+                    <th>AT</th>
+                    <th>BT</th>
+                    <th>ST</th>
+                    <th>CT</th>
+                    <th>RT</th>
+                    <th>WT</th>
+                    <th>TAT</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="chart">
+      <table id="am">
+        <tr id="row1"></tr>
+        <tr id="row2"></tr>
+      </table>
+    </div>
+    <div class="barchart" id="container"></div>
+       
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.0/themes/dark_earth.min.js" type="text/javascript"></script>
+    <script src="rr.js"></script>
+  </body>
+</html>

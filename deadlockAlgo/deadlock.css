@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.nav {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 8vh;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  padding: 5px;
+  width: 80%;
+}
+
+.nav > div > .name {
+  font-size: 18px;
+  letter-spacing: 3px;
+  width: 20%;
+}
+
+.nav > div > .name > a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav > div > .logo {
+  font-family: "Chonburi", cursive;
+  font-size: 28px;
+  letter-spacing: 2px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav > div > .button {
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+}
+
+.nav > div > .button > div {
+  z-index: 1;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 30px;
+  position: relative;
+  animation: reversetextcolor;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+.nav > div > .button > div:hover {
+  animation: textcolor;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes textcolor {
+  from {
+    color: black;
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes reversetextcolor {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
+
+.nav > div > .button > div::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+
+.nav > div > .button > div:hover::before,
+.nav > div > .button > div:focus::before {
+  transform: scaleX(1);
+}
+
+.main {
+  z-index: 1;
+  padding: 0px 30px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.main > .image {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../assets/images/deadlock.jpg");
+  height: 95vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.main > .image > div {
+  width: 50%;
+}
+
+.main > .image > .main-heading {
+  font-family: "Chonburi", cursive;
+  font-size: 50px;
+  color: aliceblue;
+  padding: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main > .image > .main-content {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  color: aliceblue;
+  padding: 100px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main > .image > .divider {
+  width: 2px;
+  background-color: rgba(214, 214, 214, 0.5);
+  height: 70%;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding-top: 95vh;
+  width: 100vw;
+}
+
+.content > .menu {
+  background-color: white;
+}
+
+.content > .menu > .menu-heading {
+  font-family: "Work Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0px 50px 0px;
+  background-color: white;
+}
+
+.content > .menu > .menu-item {
+  padding: 50px;
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content > .menu > .menu-item > div {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 1000px;
+  margin: 20px;
+  padding: 10px 10px 10px 30px;
+}
+
+.content > .menu > .menu-item > div > .heading {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 8px;
+}
+
+.content > .menu > .menu-item > div > div {
+  display: flex;
+  justify-content: center;
+}
+
+.content > .menu > .menu-item > div > div > div:first-child {
+  width: 50%;
+}
+
+.content > .menu > .menu-item > div > div > div:last-child {
+  width: 50%;
+}
+
+.content > .menu > .menu-item > div > div > .theory {
+  padding: 20px;
+}
+
+.content > .menu > .menu-item > div > div > .theory > p.heading {
+  font-family: "Crimson Pro";
+  font-weight: 800;
+  font-size: 30px;
+  color: #333333;
+}
+
+.content > .menu > .menu-item > div > div > .theory > p:not(.heading) {
+  display: flex;
+  padding: 30px 30px 30px 0px;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+}
+
+.content > .menu > .menu-item > div > div > .al-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: rgb(225, 241, 255);
+}
+.content > .menu > .menu-item > div > div > .al-list > .li1 {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.content > .menu > .menu-item > div > div > .al-list > .li2 {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.content > .menu > .menu-item > div > div > .al-list > .li1 > div {
+  margin: 10px;
+}
+.content > .menu > .menu-item > div > div > .al-list > .li2 > div {
+  margin: 10px;
+}
+.content > .menu > .menu-item > div > div > .al-list > .li1 > div > a {
+  text-decoration: none;
+  color: inherit;
+  z-index: 10;
+}
+.content > .menu > .menu-item > div > div > .al-list > .li2 > div > a {
+  text-decoration: none;
+  color: inherit;
+  z-index: 10;
+}
+.menu-item > div > div > .al-list > div > div > a > p {
+  width: 130px;
+  height: 130px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item > div > div > .al-list > div > div {
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-item > div > div > .al-list > div > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  transition: top, bottom, right, left, 300ms ease-in-out;
+}
+.menu-item > .item-1 > div > .al-list > div > .d1::before {
+  border: 3px solid #ffc000;
+}
+.menu-item > .item-2 > div > .al-list > div > .c1::before {
+  border: 3px solid #06b0d7;
+}
+.menu-item > .item-2 > div > .al-list > div > .c2::before {
+  border: 3px solid #010b1e;
+}
+.menu-item > .item-2 > div > .al-list > div > .c3::before {
+  border: 3px solid #430f0f;
+}
+.menu-item > .item-2 > div > .al-list > div > .c4::before {
+  border: 3px solid #e41d1d;
+}
+.menu-item > .item-2 > div > .al-list > div > .c5::before {
+  border: 3px solid #673ab7;
+}
+.menu-item > .item-3 > div > .al-list > div > .s1::before {
+  border: 3px solid #ff005d;
+}
+.menu-item > .item-3 > div > .al-list > div > .s2::before {
+  border: 3px solid #220a41;
+}
+
+.menu-item > div > div > .al-list > div > div:hover::before,
+.menu-item > div > div > .al-list > div > div:focus::before {
+  top: calc(3px * -2);
+  bottom: calc(3px * -2);
+  right: calc(3px * -2);
+  left: calc(3px * -2);
+}
+.menu-item > .item-1 > div > .al-list > div > div > a > p {
+  color: white;
+  background-color: #ffc000;
+}
+.menu-item > .item-2 > div > .al-list > .li1 > .c1 > a > p {
+  color: white;
+  background-color: #06b0d7;
+}
+.menu-item > .item-2 > div > .al-list > .li1 > .c2 > a > p {
+  color: white;
+  background-color: #010b1e;
+}
+.menu-item > .item-2 > div > .al-list > .li1 > .c3 > a > p {
+  color: white;
+  background-color: #430f0f;
+}
+.menu-item > .item-2 > div > .al-list > .li2 > .c4 > a > p {
+  color: white;
+  background-color: #e41d1d;
+}
+.menu-item > .item-2 > div > .al-list > .li2 > .c5 > a > p {
+  color: white;
+  background-color: #673ab7;
+}
+.menu-item > .item-3 > div > .al-list > .li1 > .s1 > a > p {
+  color: white;
+  background-color: #ff005d;
+}
+.menu-item > .item-3 > div > .al-list > .li1 > .s2 > a > p {
+  color: white;
+  background-color: #220a41;
+}

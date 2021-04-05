@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.nav {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 8vh;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  padding: 5px;
+  width: 80%;
+}
+
+.nav > div > .name {
+  font-size: 18px;
+  letter-spacing: 3px;
+  width: 20%;
+}
+
+.nav > div > .logo {
+  font-family: "Chonburi", cursive;
+  font-size: 28px;
+  letter-spacing: 2px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav > div > .button {
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+}
+
+.nav > div > .button > div {
+  z-index: 1;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 30px;
+  position: relative;
+  animation: reversetextcolor;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+.nav > div > .button > div:hover {
+  animation: textcolor;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes textcolor {
+  from {
+    color: black;
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes reversetextcolor {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
+
+.nav > div > .button > div::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+
+.nav > div > .button > div:hover::before,
+.nav > div > .button > div:focus::before {
+  transform: scaleX(1);
+}
+
+.mainpage {
+  z-index: 1;
+  padding: 0px 30px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.mainpage > .page {
+  background: url("assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainpage > .page > .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0px 0px 0px;
+}
+
+.mainpage > .page > .heading > p {
+  font-family: "Chonburi", cursive;
+  font-size: 50px;
+  font-weight: 600;
+  display: block;
+  letter-spacing: 5px;
+}
+
+.mainpage > .page > .heading > p:nth-child(3) {
+  padding: 30px;
+  font-size: 20px;
+  font-family: "Work Sans";
+  letter-spacing: 19px;
+}
+
+.content {
+  z-index: 2;
+  position: relative;
+  padding-top: 95vh;
+  width: 100vw;
+}
+
+.info {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+}
+
+.info > .subheading {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.info > .subheading > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 60px;
+}
+
+.info > .subheading > div > div:nth-child(1) {
+  font-family: "Crimson Pro", serif;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.info > .subheading > div > div:nth-child(1) > span {
+  font-family: "Crimson Pro", serif;
+  color: rgb(0, 184, 184);
+  font-weight: 200;
+  font-style: italic;
+  font-size: 35px;
+}
+
+.info > .subheading > div > div:nth-child(2) > .os {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 5px 0px;
+}
+
+.info > .subheading > div > div:nth-child(2) > .defination {
+  font-family: "Crimson Pro", serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.info > .menu {
+  width: 80%;
+  padding-bottom: 100px;
+}
+
+.info > .menu > .menu-heading {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 60px;
+  letter-spacing: 5px;
+}
+
+.info > .menu > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info > .menu > div > div {
+  background-color: white;
+  padding: 10px;
+  margin: 30px;
+  width: 80vh;
+}
+
+.info > .menu > div > div > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.info > .menu > div > div > a > .image {
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  height: 50vh;
+  position: relative;
+}
+
+.info > .menu > div > div > a > .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.8;
+  background-color: aliceblue;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.info > .menu > div > div > a > .image:hover::before {
+  transform: scaleY(1);
+}
+
+.info > .menu > div > div > a > .image > .link {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: auto;
+  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+  opacity: 0;
+}
+
+.info > .menu > div > div > a > .image > .link:hover {
+  animation: showlink;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showlink {
+  100% {
+    opacity: 1;
+  }
+}
+
+.info > .menu > div > div > a > .image > .title {
+  font-family: "Crimson Pro", serif;
+  color: white;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.info > .menu > div > .deadlock > a > .image {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("assets/images/deadlock.jpg");
+  background-size: 40vw;
+  background-position: center;
+}
+
+.info > .menu > div > .sheduling > a > .image {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("assets/images/shedulingAlgo.jpg");
+  background-size: 60vw;
+  background-position: center;
+}
+
+.info > .menu > div > .page > a > .image {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("assets/images/page.jpg");
+  background-size: 40vw;
+  background-position: center;
+}
+
+.info > .menu > div > .disk > a > .image {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("assets/images/disk.jpg");
+  background-size: 40vw;
+  background-position: center;
+}
+
+.info > .menu > div > div > a > .text > .text-heading {
+  font-family: "Crimson Pro", serif;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.info > .menu > div > div > a > .text > .text-heading::after {
+  content: "";
+  padding: 0.6px;
+  top: 5px;
+  width: 70%;
+  position: relative;
+  background-color: rgb(216, 216, 216);
+  display: block;
+}
+
+.info > .menu > div > div > a > .text {
+  padding: 15px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.footer {
+  font-family: "Crimson Pro", serif;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  width: 99%;
+  background-color: white;
+  padding: 100px;
+  font-weight: 600;
+}

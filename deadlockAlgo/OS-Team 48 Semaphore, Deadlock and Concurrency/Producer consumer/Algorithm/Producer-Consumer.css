@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+
+
+body {
+        position: relative;
+	margin-top: 150px;
+        margin-left: 300px;
+        font-family: "Montserrat", sans-serif;
+	height: 1500px;
+        background-image: linear-gradient(335deg,
+        rgba(239, 239, 249, 1) 38%,
+        rgba(160, 208, 243, 1) 83%,
+        rgba(144, 226, 243, 1) 100%);
+}
+
+button {
+        display: inline-flex;
+        margin-left: 30px;
+
+        background-color: transparent;
+	padding: 10px 22px;
+	text-align: center;
+	font-weight: bold;
+	color: #373a40;
+	border: 2px solid #1e6774;
+	border-radius: 5px;
+}
+
+.button_slide {
+	color: #373a40;
+	border: 2px solid #1e6774;
+	border-radius: 7px;
+	padding: 10px 22px;
+	display: inline-block;
+	/* font-size: 14px; */
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 1px;
+	box-shadow: inset 0 0 0 0 #136a6b;
+	-webkit-transition: ease-out 0.5s;
+	-moz-transition: ease-out 0.5s;
+	transition: ease-out 1s;
+}
+
+.slide_right:hover {
+	color: #fff;
+	box-shadow: inset 400px 0 0 0 #134d4e;
+}
+
+#b1 {
+	position: absolute;
+	height: auto;
+	width: auto;
+	margin-top: 135px;
+	margin-left: 115px;
+}
+
+
+#textArea {
+        display: flex;
+        margin-left: 300px;
+        margin-top: -250px;
+}
+
+.PR {
+    align-self: center;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+.props {
+    display: inline-block;
+    margin-left: 1%;
+    text-align: center;
+    vertical-align: middle;
+    height: 40px;
+    width: 40px;
+    color: #ffffff;
+    /* animation: mymove 3s;
+    animation-fill-mode: forwards; */
+    /* -webkit-animation: slide-out-elliptic-right-bck 0.7s ease-in both;
+	        animation: slide-out-elliptic-right-bck 0.7s ease-in both; */
+}
+
+.output {
+        display: block;
+}
+
+/* @keyframes mymove {
+    from {color: #ffffff; background-color: #000000}
+    to {color: #000000; background-color: #ffffff}
+  } */
+
+
+ /* @-webkit-keyframes slide-out-elliptic-right-bck {
+    0% {
+      -webkit-transform: translateX(0) rotateY(0) scale(1);
+              transform: translateX(0) rotateY(0) scale(1);
+      -webkit-transform-origin: -1800px 50%;
+              transform-origin: -1800px 50%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(1000px) rotateY(-30deg) scale(0);
+              transform: translateX(1000px) rotateY(-30deg) scale(0);
+      -webkit-transform-origin: -100% 50%;
+              transform-origin: -100% 50%;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-elliptic-right-bck {
+    0% {
+      -webkit-transform: translateX(0) rotateY(0) scale(1);
+              transform: translateX(0) rotateY(0) scale(1);
+      -webkit-transform-origin: -1800px 50%;
+              transform-origin: -1800px 50%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(1000px) rotateY(-30deg) scale(0);
+              transform: translateX(1000px) rotateY(-30deg) scale(0);
+      -webkit-transform-origin: -100% 50%;
+              transform-origin: -100% 50%;
+      opacity: 1;
+    }
+  }
+   */
+
+   @import url("https://fonts.googleapis.com/css?family=Montserrat:200&display=swap");
+
+   a {
+           text-decoration: none;
+           color: #fff;
+   }
+   .nav {
+           background: rgba(0, 0, 0, 0.87);
+           padding: 15px 0;
+           padding-top: 7px;
+           padding-bottom: 5px;
+           margin-top: 0px;
+           margin-left: 0px;
+           margin-right: 0px;
+           margin-bottom: 149px;
+   }
+   .nav:after {
+           display: block;
+           content: "";
+           clear: right;
+   }
+   .container {
+           width: calc(100% - 200px);
+   }
+   .brand-logo {
+           color: #fff;
+           font-size: 20px;
+           margin-top: 100px;
+           margin-left: 20px;
+   }
+   input[type="checkbox"] {
+           display: none;
+   }
+   .menu {
+           margin: 4px;
+           padding: 5px;
+           border: 1px #fff solid;
+           position: absolute;
+           font-size: 12px;
+           color: #fff;
+           top: 10px;
+           left: 10px;
+           background: none;
+           text-transform: capitalize;
+           outline: none;
+           display: none;
+   }
+   ul {
+           float: right;
+           font-size: 0;
+   }
+   li {
+           display: inline-block;
+           font-size: 20px;
+           margin: 0 10px;
+           text-transform: capitalize;
+           color: #fff;
+           padding: 5px 0;
+   }
+   li:first-child {
+           margin-left: 0;
+   }
+   li:last-child {
+           margin-right: 0;
+   }
+   .services {
+           cursor: pointer;
+           padding-right: 5px;
+   }
+   .services:hover .services-dropdown {
+           display: block;
+           color: black;
+           cursor: pointer;
+   }
+   .services-dropdown {
+           display: none;
+           max-width: 200px;
+           position: absolute;
+           background: #f4f4f4;
+           z-index: 2;
+   }
+   .services-dropdown a {
+           display: block;
+           color: #000;
+           padding: 10px 15px;
+           font-size: 18px;
+   }
+   .services-dropdown a:hover {
+           background: #dcdcdc;
+   }
+   li input[type="text"] {
+           height: 20px;
+           padding: 7px 15px;
+           font-size: 15px;
+           background: #fff;
+           border: none;
+           border-top-left-radius: 5px;
+           border-bottom-left-radius: 5px;
+   }
+   .fa-search {
+           background: white;
+           color: #4a4a4a;
+           padding: 10px;
+           vertical-align: middle;
+           border: none;
+           border-top-right-radius: 5px;
+           border-bottom-right-radius: 5px;
+           font-size: 14px;
+   }
+   li input[type="text"]:focus {
+           outline: none;
+   }
+   .hover:after {
+           display: block;
+           content: "";
+           border-bottom: 2px solid #fff;
+           transform: scaleX(0);
+           transition: transform ease-in 200ms;
+   }
+   .hover:hover:after {
+           transform: scaleX(1);
+   }
+   
+   @media screen and (max-width: 1024px) {
+           .brand-logo {
+                   font-size: 20px;
+                   margin-left: 100px;
+           }
+           li {
+                   font-size: 15px;
+                   padding: 0;
+           }
+           .container {
+                   width: calc(100% - 100px);
+           }
+           li input[type="text"] {
+                   height: 12px;
+                   font-size: 12px;
+           }
+           .fa-search {
+                   font-size: 8px;
+                   padding: 9px;
+                   vertical-align: top;
+           }
+           .services-dropdown a {
+                   font-size: 11px;
+           }
+   }
+   @media screen and (max-width: 768px) {
+           .container {
+                   width: calc(100% - 40px);
+           }
+           .brand-logo {
+                   display: block;
+                   text-align: center;
+                   font-size: 1px;
+                   margin-left: 20px;
+           }
+           ul {
+                   display: none;
+                   float: none;
+                   text-align: center;
+           }
+           .fa-search {
+                   font-size: 8px;
+                   padding: 9px;
+                   vertical-align: top;
+           }
+           .menu {
+                   display: block;
+           }
+           .menu-toggle:checked ~ ul {
+                   display: block;
+           }
+           li {
+                   margin: 10px;
+                   padding: 0;
+           }
+           li:last-child {
+                   display: block;
+           }
+   }
+   @media screen and (max-width: 428px) {
+           li {
+                   font-size: 12px;
+           }
+           .fa-search {
+                   font-size: 8px;
+                   padding: 9px;
+                   vertical-align: top;
+           }
+   }

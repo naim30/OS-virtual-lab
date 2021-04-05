@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Banker's Algorithm</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
+
+  <body>
+  <h1 id="midd"><a href="https://www.geeksforgeeks.org/bankers-algorithm-in-operating-system-2/" style="color:rgb(39, 90, 110)">Banker's Algorithm</a></h1>
+  <p id="def">The banker’s algorithm is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating the allocation for predetermined maximum possible amounts of all resources, then makes an “s-state” check to test for possible activities, before deciding whether allocation should be allowed to continue.
+    <br/>
+    Banker’s algorithm is named so because it is used in banking system to check whether loan can be sanctioned to a person or not. Suppose there are n number of account holders in a bank and the total sum of their money is S. If a person applies for a loan then the bank first subtracts the loan amount from the total money that bank has and if the remaining amount is greater than S then only the loan is sanctioned. It is done because if all the account holders comes to withdraw their money then the bank can easily do it.
+    <br/>
+    In other words, the bank would never allocate its money in such a way that it can no longer satisfy the needs of all its customers. The bank would try to be in safe state always.
+  </p>
+    <button id="bt" type="button"><a href="Algorithm/BankersDyn.html">Execute</a></button>
+    <div id="page-wraper">
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/1.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Basic</h4>
+                  <p>
+                     
+                    Here welcome to the Banker's algorithm here you can see different sections and a whole table just configured for you , you can solve almost all the banker's questions
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Tool Tips</h4>
+                  <p>
+                    Now if you want to know what the thing is or what is banker's algorithm or anything we have tooltip for you just hover over labels and headings and you will get your help
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/2.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/3.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Input</h4>
+                  <p>
+                    You can input the values of the processes A B C in Allocation i.e number of resources available of each type and maximum resources a process is allowed to have also you can enter the currently available resources at Available, you can simulate the real examples of banker's algorithm.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Button panel</h4>
+                  <p>
+                    Here we have add button to add process , subtract button to remove process
+                    and submit button to get the simulation answer
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/4.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/5.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Substraction</h4>
+                  <p>
+                    You can hit the minus button if you added some extra processes
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4> Answers</h4>
+                  <p>
+                    Answers at bouncing bellow. Here it shows the answers in the other the process executed
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/6.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Analysis of Banker's Algorithm approach</h4>
+                  <p>
+                    Characteristics of Banker's Algorithm<br/>
+
+                    1. Keep many resources that satisfy the requirement of at least one client<br/>
+                    2. Whenever a process gets all its resources, it needs to return them in a restricted period.<br/>
+                    3. When a process requests a resource, it needs to wait<br/>
+                    4. The system has a limited number of resources<br/>
+                    5. Advance feature for max resource allocation<br/><br/>
+                    Disadvantage of Banker's algorithm<br/>
+
+                    1. Does not allow the process to change its Maximum need while processing<br/>
+                    2. It allows all requests to be granted in restricted time, but one year is a fixed period for that.<br/>
+                    3. All processes must know and state their maximum resource needs in advance.<br/><br/>
+                    Summary:<br/>
+                    1. Banker's algorithm is used majorly in the banking system to avoid deadlock. It helps you to identify whether a loan will be given or not.<br/>
+                    2. Notations used in banker's algorithms are 1) Available 2) Max 3) Allocation 4) Need<br/>
+                    3. Resource request algorithm enables you to represent the system behavior when a specific process makes a resource request.<br/>
+                    4. Banker's algorithm keeps many resources that satisfy the requirement of at least one client<br/>
+                    5. The biggest drawback of banker's algorithm this that it does not allow the process to change its Maximum need while processing.<br/>
+                   
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image"><br/><br/><br/><br/>
+                  <img src="ss/1.jpg" alt="abc" width="150" height="350">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        </div>
+      </section>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Lock Variavle</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
+
+  <body>
+  <h1 id="midd"><a href="https://www.javatpoint.com/os-lock-variable-mechanism" style="color:rgb(39, 90, 110)">Lock Variable</a></h1>
+  <p id="def">This is the simplest synchronization mechanism. This is a Software Mechanism implemented in User mode. This is a busy waiting solution which can be used for more than two processes.
+
+    In this mechanism, a Lock variable lockis used. Two values of lock can be possible, either 0 or 1. Lock value 0 means that the critical section is vacant while the lock value 1 means that it is occupied.
+    
+    A process which wants to get into the critical section first checks the value of the lock variable. If it is 0 then it sets the value of lock as 1 and enters into the critical section, otherwise it waits.  
+  </p>
+    <button id="bt" type="button"><a href="Algorithm/index.html">Execute</a></button>
+    <div id="page-wraper">
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/1.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Buttons info</h4>
+                  <p>
+                    Home       : In navbar home button is to jump to main page <br>
+                    Dropdown   : To jump to any algorithm <br>
+                    Info panel : Displays the value of each required queue and semaphore. <br/>
+                    Add Process: On clicking this button new process will be added. <br/>
+                    P0         : On clicking this button P0 process will move forward according to algorithm. <br/>
+                    save PDF   : To save all the status of each stage of algorithm . <br> 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Tool Tips</h4>
+                  <p>
+                    Tooltips will help to get information about the hovered element. <br>
+                    here element with tooltips are:<br> Lock Variable, critical section, completed processes, </t>Added, Entry, CS, Exit
+                 </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/2.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/3.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>To CS</h4>
+                  <p>
+                    By clicking the button the process will be moved to Critical Section if the Critical section is not occupied or Lock is 0.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Add Processes</h4>
+                  <p>
+                    By clicking Add Processes new processes will be added with the button and process icon.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/4.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/5.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>To Entry Section</h4>
+                  <p>
+                    Processes will move to suspended queue if the critical section is occupied. <br>
+                    Example: p2 will be moved to suspended queue as critical section is occupied by p0.
+                 </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Warning</h4>
+                  <p>
+                    If the process is there in critical section still if any process tries to interrupt then it will show the warning.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/6.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/7.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Full completion</h4>
+                  <p>
+                    It's gratitude message to display that all the processes are completed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Save PDF</h4>
+                  <p>
+                    By clicking the save PDF the pdf will be formed by collecting all the text in textArea.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/8.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Analysis of Lock Variable</h4>
+                  <p>
+                    The lock variable mechanism doesn't provide Mutual Exclusion in some of the cases. This can be better described by looking at the pseudo code by the Operating System point of view I.E. Assembly code of the program. Let's convert the Code into the assembly language.<br/><br/>
+
+                    Load Lock, R0<br/>
+                    CMP R0, #0<br/>
+                    JNZ Step 1<br/>
+                    Store #1, Lock<br/>
+                    Store #0, Lock<br/><br/>
+
+                    The problem with the lock variable mechanism is that, at the same time, more than one process can see the vacant tag and more than one process can enter in the critical section. Hence, the lock variable doesn't provide the mutual exclusion that's why it cannot be used in general.<br/>
+
+                    Since, this method is failed at the basic step; hence, there is no need to talk about the other conditions to be fulfilled.<br/>
+                   
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <br/>
+                  <img src="ss/1.jpeg" alt="abc" width="150" height="400">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        </div>
+      </section>
+    </div>
+    
+  </body>
+</html>

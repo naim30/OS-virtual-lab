@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HRRN</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chonburi&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="hrrn.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <div>
+          <div class="name"><a href="../../index.html">HOME</a></div>
+          <div class="logo">VIRTUAL LAB</div>
+          <div class="button">
+            <div>
+              <div></div>
+              MENU
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu-item">
+          <div>
+            <a href="../FCFS/fcfs.html">
+              <div class="fcfs">
+                <div class="short-title">FCFS</div>
+                <div class="long-title">
+                  First come<br />
+                  first serve
+                </div>
+              </div>
+            </a>
+            <a href="../SJF/sjf.html">
+              <div class="sjf">
+                <div class="short-title">SJF</div>
+                <div class="long-title">
+                  Shortest job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../LJF/ljf.html">
+              <div class="ljf">
+                <div class="short-title">LJF</div>
+                <div class="long-title">
+                  Longest job<br />
+                  first
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="../RR/rr.html">
+              <div class="rr">
+                <div class="short-title">RR</div>
+                <div class="long-title">Round Robin</div>
+              </div>
+            </a>
+            <a href="../SRJF/srjf.html">
+              <div class="srjf">
+                <div class="short-title">SRJF</div>
+                <div class="long-title">
+                  Shortest<br />
+                  remaining job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../PP/pp.html">
+              <div class="pp">
+                <div class="short-title">PP</div>
+                <div class="long-title">
+                  Prioprity<br />
+                  ( preemptive )
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <div class="hrrn">
+                <div class="short-title">HRRN</div>
+                <div class="long-title">
+                  Highest<br />
+                  response ratio<br />
+                  next
+                </div>
+              </div>
+            </a>
+            <a href="../LRJF/lrjf.html">
+              <div class="lrjf">
+                <div class="short-title">LRJF</div>
+                <div class="long-title">
+                  Longest<br />
+                  remaining job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../PNP/pnp.html">
+              <div class="pnp">
+                <div class="short-title">PNP</div>
+                <div class="long-title">
+                  Priority<br />
+                  ( non-preemptive )
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="theory">
+          <div class="theory-heading">
+            <div>HIGHEST RESPONSE RATIO NEXT</div>
+            <div>H.R.R.N.</div>
+          </div>
+          <div class="theory-text">
+            <div>Basic Theory :</div>
+            <div></div>
+            <div>
+              &emsp;&emsp;Highest Response Ratio Next (HRNN) is one of the most
+              optimal scheduling algorithms. This is a non-preemptive algorithm
+              in which, the scheduling is done on the basis of an extra
+              parameter called Response Ratio. A Response Ratio is calculated
+              for each of the available jobs and the Job with the highest
+              response ratio is given priority over the others.<br />
+              <br />
+
+              Response Ratio is calculated by the given formula. : <br />
+
+              Response Ratio = (W+S)/S
+            </div>
+          </div>
+          <div class="theory-step">
+            <ul>
+              <label>STEP 1 :</label>
+              <li>
+                Input the number of processes, their arrival times and burst
+                times.
+              </li>
+              <label>STEP 2 :</label>
+              <li>Sort them according to their arrival times.</li>
+              <label>STEP 3 :</label>
+              <li>
+                At any given time calculate the response ratios and select the
+                appropriate process to be scheduled.
+              </li>
+              <label>STEP 4 :</label>
+              <li>
+                Calculate the turn around time as completion time – arrival
+                time.
+              </li>
+              <label>STEP 5 :</label>
+              <li>
+                Calculate the waiting time as turn around time – burst time.
+              </li>
+              <label>STEP 6 :</label>
+              <li>
+                Turn around time divided by the burst time gives the normalized
+                turn around time.
+              </li>
+              <label>STEP 7 :</label>
+              <li>
+                Sum up the waiting and turn around times of all processes and
+                divide by the number of processes to get the average waiting and
+                turn around time.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="visualizer">
+        <div class="error">Invalid Input</div>
+        <div class="container">
+          <div>
+            <div class="buttons">
+              <div class="play">PLAY</div>
+              <div class="reset">RESET</div>
+            </div>
+            <div class="avg-tat">Average TAT : <span id="one">0</span></div>
+            <div class="avg-wt">Average WT : <span id="two">0</span></div>
+            <div class="avg-rt">Average RT : <span id="three">0</span></div>
+          </div>
+          <div>
+            <div class="add-process">
+              <div class="input">
+                <div class="arrival">
+                  <label for="arrival-time"> Arrival Time :</label>
+                  <input type="text" id="arrival-time" />
+                </div>
+
+                <div class="burst">
+                  <label for="burst-time">Burst Time :</label>
+                  <input type="text" id="brust-time" />
+                </div>
+              </div>
+              <div class="add">ADD</div>
+            </div>
+
+            <div class="table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>PID</th>
+                    <th>AT</th>
+                    <th>BT</th>
+                    <th>ST</th>
+                    <th>CT</th>
+                    <th>RT</th>
+                    <th>WT</th>
+                    <th>TAT</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="chart">
+      <table id="am">
+        <tr id="row1"></tr>
+        <tr id="row2"></tr>
+      </table>
+    </div>
+    <div class="barchart" id="container"></div>
+       
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.0/themes/dark_earth.min.js" type="text/javascript"></script>
+    <script src="hrrn.js"></script>
+  </body>
+</html>

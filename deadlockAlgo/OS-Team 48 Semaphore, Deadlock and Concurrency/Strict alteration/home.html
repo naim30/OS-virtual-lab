@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Stict alteration</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
+
+  <body>
+    <h1 id="midd"><a href="https://www.javatpoint.com/os-turn-variable-or-strict-alternation-approach" style="color:rgb(39, 90, 110)">Strict Alteration</a></h1>
+  <p id="def">Strict Alternation Approach is the software mechanism implemented at user mode. It is a busy waiting solution which can be implemented only for two processes. In this approach, A turn variable is used which is actually a lock.
+
+    This approach can only be used for only two processes. In general, let the two processes be P0 and P1. They share a variable called turn variable. The execution of the algorithm can be seen in following steps</p>
+    <button id="bt" type="button"><a href="Algorithm/index.html">Execute</a></button>
+    <div id="page-wraper">
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/1.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Buttons overview</h4>
+                  <p>
+                    Turn Box : Displays the value of turn variable (which process turn is there to go in critical section).<br/>
+                    Process0 : On clicking this button P0 process will move forward.<br/>
+                    Process1 : On clicking this button P1 process will move forward.<br/>
+                    EndP0    : If P0 is in critical section then on clicking this button it will end the process and comeback to non critical section.<br/>
+                    EndP1    : If P1 is in critical section then on clicking this button it will end the process and comeback to non critical section.<br/>
+                    Reset    : The page will be reloaded.<br/>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>How to execute: Step 1</h4>
+                  <p>
+                    Press Process0 as we can see turn is for P0 so it will move P0 into critical section.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/4.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/5.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Step 2</h4>
+                  <p>
+                   Now if P1 is ready to go in critical section then press Process1 which will check will turn is for P1 or not. If not then it will move P1 in while loop till P0 completes its execution.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Step 3</h4>
+                  <p>
+                    As execution of P0 is over press EndP0 to move it in non critical section and chage the value of turn variable to P1.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/6.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/7.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Step 4</h4>
+                  <p>
+                    As critical section is empty and P1 is ready in while and its P1's turn press Process1 to move P1 in critical section.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Step 5</h4>
+                  <p>
+                    Now if P0 is again reay to be executed then press Process0 but critical section is not empty and P1 turn is there so P0 will move to while loop.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/8.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/9.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Step 6</h4>
+                  <p>
+                    As P1 completes its execution press EndP1 to move it to non critical section and press Process0 to move P0 in critical section as turn variable is showing value P0 and critical section is empty.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Alert message</h4>
+                  <p>
+                   If value to turn variable is P0 and you press Process1 then it will show an alert message that "turn is for process 0".(Condition: Both processes should be non critical section). 
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/2.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/3.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Alert message</h4>
+                  <p>
+                    If value to turn variable is P1 and you press Process0 then it will show an alert message that "turn is for process 1".(Condition: Both processes should be non critical section).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Analysis of Strict Alternation approach</h4>
+                  <p>
+                    <p id="hea">1.Mutual Exclusion<br/></p>
+                    <p id="de">The strict alternation approach provides mutual exclusion in every case. This procedure works only for two processes. The pseudo code is different for both of the processes. The process will only enter when it sees that the turn variable is equal to its Process ID otherwise not Hence No process can enter in the critical section regardless of its turn.<br/></p>
+                      
+                    <p id="hea">2.Progress<br/></p>
+                    <p id="de">Progress is not guaranteed in this mechanism. If P0 doesn't want to get enter into the critical section on its turn then P1 got blocked for infinite time. P1 has to wait for so long for its turn since the turn variable will remain 0 until P0 assigns it to 1.<br/></p>
+                      
+                    <p id="hea">3.Portability<br/></p>
+                    <p id="de">The solution provides portability. It is a pure software mechanism implemented at user mode and doesn't need any special instruction from the Operating System.</p>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <br/>
+                  <img src="ss/1.jpeg" alt="abc" width="150" height="450">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        </div>
+      </section>
+    </div>
+    
+  </body>
+</html>

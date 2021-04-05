@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Producer Consumer</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
+
+  <body>
+  <h1 id="midd"><a href="https://www.javatpoint.com/producer-consumer-problem-in-os" style="color:rgb(39, 90, 110)">Producer Consumer</a></h1>
+  <p id="def">The Producer-Consumer problem is a classical multi-process synchronization problem, that is we are trying to achieve synchronization between more than one process.
+
+    There is one Producer in the producer-consumer problem, Producer is producing some items, whereas there is one Consumer that is consuming the items produced by the Producer. The same memory buffer is shared by both producers and consumers which is of fixed-size.
+    
+    The task of the Producer is to produce the item, put it into the memory buffer, and again start producing items. Whereas the task of the Consumer is to consume the item from the memory buffer..</p>
+    <button id="bt" type="button"><a href="Algorithm/Producer-Consumer.html">Execute</a></button>
+    <div id="page-wraper">
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/1.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Algorithm overview</h4>
+                  <p>
+                    This is the implementation of Producer Consumer algorithm. Here, we can have input of no. of process and  along with that the time to see the visualization.
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Input No. of process</h4>
+                  <p>
+                    Enter the no. of process you want to see being produced and consumed at any random instant of time.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/2.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/3.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Input total time</h4>
+                  <p>
+                    Here, enter the total amount of time, you want to carry out the visualization
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Visualization</h4>
+                  <p>
+                    By clicking on Visualize, you will be able to see any random process being produced(will be shown with black colored box) and soon later being consumed(will be shown with white colored box).
+                    <br/><br/>
+                    Here, NOTE THAT out of all given processes, randomly any process will be picked and with that it will be consumed after a certain amount of time
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/4.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/5.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Save PDF</h4>
+                  <p>
+                    By clicking on Save PDF, you will be able to download which process was produced and consumed at all instant of total time allotted  to execute
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Analysis of Producer Consumer approach</h4>
+                  <p>
+                    In computing, the producer-consumer problem (also known as the bounded-buffer problem) is a classic example of a multi-process synchronization problem. The problem describes two processes, the producer and the consumer, which share a common, fixed-size buffer used as a queue.
+                    <br/>
+                    The producer’s job is to generate data, put it into the buffer, and start again.<br/>
+                    At the same time, the consumer is consuming the data (i.e. removing it from the buffer), one piece at a time.<br/><br/>
+                    Problem:<br/>
+                    To make sure that the producer won’t try to add data into the buffer if it’s full and that the consumer won’t try to remove data from an empty buffer.
+                    <br/><br/>
+                    Solution:<br/>
+                    The producer is to either go to sleep or discard data if the buffer is full. The next time the consumer removes an item from the buffer, it notifies the producer, who starts to fill the buffer again. In the same way, the consumer can go to sleep if it finds the buffer to be empty. The next time the producer puts data into the buffer, it wakes up the sleeping consumer.
+                    An inadequate solution could result in a deadlock where both processes are waiting to be awakened.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image"><br/><br/>
+                  <img src="ss/producer-consumer-problem-in-c.png" alt="abc" width="150" height="350">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        </div>
+      </section>
+    </div>
+    
+  </body>
+</html>

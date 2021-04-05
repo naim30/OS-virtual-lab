@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Test and Set Lock</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
+
+  <body>
+  <h1 id="midd"><a href="https://www.javatpoint.com/os-tsl-mechanism" style="color:rgb(39, 90, 110)">Test and Set Lock</a></h1>
+  <p id="def">TestAndSet is a hardware solution to the synchronization problem. In TestAndSet, we have a shared lock variable which can take either of the two values, 0 or 1.<br/>
+    Before entering into the critical section, a process inquires about the lock. If it is locked, it keeps on waiting until it becomes free and if it is not locked, it takes the lock and executes the critical section.  
+  </p>
+    <button id="bt" type="button"><a href="Algorithm/index.html">Execute</a></button>
+    <div id="page-wraper">
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/1.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Buttons overview</h4>
+                  <p>
+                    As you can see from the screenshot, there are two buttons P0 and P1 which represents process P0 and P1. When you press P0 the process P0 will move and if you press P1, then process P1 will move.
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Step 1</h4>
+                  <p>
+                    Here, if you press P0, then process P0 go will from queue to the entry section.  When it enters the entry section, initially the value of the lock will be 0. When it enters into the critical section, a register will come into the picture. The value of the register will be 1.<br/>
+	                  Now in the entry section itself, the exchange of values between the register and the lock takes place. <br/>
+                    Hence, the value of lock will become 1 and the value of register will become 0.<br/>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/2.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/3.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Step 2</h4>
+                  <p>
+                    Here once again if you press P0, then process P0 will go from entry section to the critical section. In critical section, only one process can occur at a time.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Step 3</h4>
+                  <p>
+                    Now if you press P1, then P1 will move from the queue to the entry section. Now again if you press P1 again, then there will be a problem as only one process can enter into the critical section.<br/> 
+                  	Process P0 is already inside the critical section, so process P1 has to wait for P0 to finish the process. <br/>
+                  	As process P0 is already inside the critical section, the value of the register will become 1 and process P1 will go into the while loop and will never enter into the critical section. <br/>
+                  	The website will show an alert message that process P1 needs to wait for process P0 to leave the critical section.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/4.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/5.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Step 4</h4>
+                  <p>
+                    Now again when you press P0, then process P0 will go from critical section to the exit section. <br/>
+                    In exit section the value of lock as well the value of the register will become 0. Again in the same time if you press P1 then again the value of lock will become 1.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Step 5</h4>
+                  <p>
+                    Now in the similar way if process P1 is in the critical section and process P0 is in entry section, then again if you press P0 the process P0 cannot enter into the critical section.<br/>
+                    The value of the register will become 1 from zero and process P0 will enter into an infinite while loop refraining it from entering it into the critical section.<br/>
+                  	An alert message will come that process P0 needs to wait for process P1 to leave the critical section.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/6.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="ss/7.PNG" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Step 6</h4>
+                  <p>
+                    Now consider a condition when process P0 and P1 are initially in the queue. Now process P0 will enter into the entry section. So the value of lock will be 1 and register will be 0.<br/>
+                    Now at the same time, process P1 will come and it will enter into the entry section.<br/>
+                    Now the value of register will become 1 hence neither process P0 nor process P1 can enter into the critical section which will lead to Deadlock.<br/>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Step 7</h4>
+                  <p>
+                    Now if any process goes from critical section to the exit section, then the value of lock and register will become 0, so that any other process can execute and utilize the critical section.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="ss/8.PNG" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Analysis of Test And Set Lock</h4>
+                  <p>
+                    Mutual Exclusion<br/>
+                    Mutual Exclusion is guaranteed in TSL mechanism since a process can never be preempted just before setting the lock variable. Only one process can see the lock variable as 0 at a particular time and that's why, the mutual exclusion is guaranteed.<br/><br/>
+
+                    Progress<br/>
+                    According to the definition of the progress, a process which doesn't want to enter in the critical section should not stop other processes to get into it. In TSL mechanism, a process will execute the TSL instruction only when it wants to get into the critical section. The value of the lock will always be 0 if no process doesn't want to enter into the critical section hence the progress is always guaranteed in TSL.<br/><br/>
+
+                    Bounded Waiting<br/>
+                    Bounded Waiting is not guaranteed in TSL. Some process might not get a chance for so long. We cannot predict for a process that it will definitely get a chance to enter in critical section after a certain time.<br/><br/>
+
+                    Architectural Neutrality<br/>
+                    TSL doesn't provide Architectural Neutrality. It depends on the hardware platform. The TSL instruction is provided by the operating system. Some platforms might not provide that. Hence it is not Architectural natural.
+                   
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <br/>
+                  <img src="ss/1.jpeg"" alt="abc" width="150" height="500">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        </div>
+      </section>
+    </div>
+    
+  </body>
+</html>

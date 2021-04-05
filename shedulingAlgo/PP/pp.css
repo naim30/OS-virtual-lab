@@ -1,0 +1,618 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+.nav {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 8vh;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  padding: 5px;
+  width: 80%;
+}
+
+.nav > div > .name {
+  font-size: 18px;
+  letter-spacing: 3px;
+  width: 20%;
+}
+
+.nav > div > .name > a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav > div > .logo {
+  font-family: "Chonburi", cursive;
+  font-size: 28px;
+  letter-spacing: 2px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav > div > .button {
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+}
+
+.nav > div > .button > div {
+  border: 1px solid black;
+  color: black;
+  padding: 10px 30px;
+  position: relative;
+}
+
+@keyframes forward-text {
+  from {
+    color: black;
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes reverse-text {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
+
+.nav > div > .button > div > div {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 1);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes hover-on {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes hover-out {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.menu {
+  position: fixed;
+  margin-top: 8vh;
+  right: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  opacity: 1;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+@keyframes slide-out {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.menu > .menu-item {
+  padding: 10px;
+  opacity: 0;
+}
+
+@keyframes reverse-menu {
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes forward-menu {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.menu > .menu-item > div {
+  display: flex;
+  justify-content: center;
+}
+
+.menu > .menu-item > div > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu > .menu-item > div > a > div {
+  margin: 20px;
+  width: 7vw;
+  height: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.menu > .menu-item > div > a > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  transition: top, bottom, right, left, 300ms ease-in-out;
+}
+
+.menu > .menu-item > div > a > .fcfs::before {
+  border: 3px solid #ffc000;
+}
+.menu > .menu-item > div > a > .sjf::before {
+  border: 3px solid #06b0d7;
+}
+.menu > .menu-item > div > a > .ljf::before {
+  border: 3px solid #010b1e;
+}
+.menu > .menu-item > div > a > .rr::before {
+  border: 3px solid #430f0f;
+}
+.menu > .menu-item > div > a > .srjf::before {
+  border: 3px solid #e41d1d;
+}
+.menu > .menu-item > div > a > .pp::before {
+  border: 3px solid #484749;
+}
+.menu > .menu-item > div > a > .hrrn::before {
+  border: 3px solid #ff005d;
+}
+.menu > .menu-item > div > a > .lrjf::before {
+  border: 3px solid #220a41;
+}
+.menu > .menu-item > div > a > .pnp::before {
+  border: 3px solid #dda3c4;
+}
+
+.menu > .menu-item > div > a > div:hover::before,
+.menu > .menu-item > div > a > div:focus::before {
+  top: calc(4px * -1.5);
+  bottom: calc(4px * -1.5);
+  right: calc(4px * -1.5);
+  left: calc(4px * -1.5);
+}
+
+.menu > .menu-item > div > a > div > div:first-child {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.menu > .menu-item > div > a > div > div:last-child {
+  font-family: "Work Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.menu > .menu-item > div > a > .fcfs {
+  background-color: #ffc000;
+}
+
+.menu > .menu-item > div > a > .sjf {
+  background-color: #06b0d7;
+}
+
+.menu > .menu-item > div > a > .ljf {
+  background-color: #010b1e;
+  color: aliceblue;
+}
+
+.menu > .menu-item > div > a > .rr {
+  background-color: #430f0f;
+  color: aliceblue;
+}
+
+.menu > .menu-item > div > a > .srjf {
+  background-color: #e41d1d;
+  color: aliceblue;
+}
+
+.menu > .menu-item > div > a > .pp {
+  background-color: #484749;
+  color: aliceblue;
+}
+
+.menu > .menu-item > div > a > .hrrn {
+  background-color: #ff005d;
+  color: aliceblue;
+}
+
+.menu > .menu-item > div > a > .lrjf {
+  background-color: #220a41;
+  color: aliceblue;
+}
+
+.menu > .menu-item > div > a > .pnp {
+  background-color: #dda3c4;
+}
+
+.content {
+  padding: 8vh 45px 0px 30px;
+  width: 100%;
+  font-family: "Chonburi", serif;
+  display: flex;
+  justify-content: center;
+}
+
+.content > .theory {
+  background-color: white;
+}
+
+.content > .theory > .theory-heading {
+  text-align: center;
+  padding: 40px 0px;
+  background-color: #484749;
+  letter-spacing: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.content > .theory > .theory-heading > div:first-child {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 30px 0px;
+}
+
+.content > .theory > .theory-heading > div:last-child {
+  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+}
+
+.content > .theory > .theory-text {
+  margin: 20px 0px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 5px;
+  padding: 50px 100px;
+}
+
+.content > .theory > .theory-text > div:first-child {
+  font-size: 25px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.content > .theory > .theory-text > div:nth-child(2) {
+  height: 1.5px;
+  background-color: rgb(216, 216, 216);
+  width: 100%;
+}
+
+.content > .theory > .theory-text > div:last-child {
+  text-align: justify;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+  color: rgb(61, 61, 61);
+  padding-top: 20px;
+}
+
+.content > .theory > .theory-step {
+  margin: 20px 0px;
+  background-color: #252141;
+  border-radius: 5px;
+  padding: 20px 100px 40px 100px;
+}
+
+.content > .theory > .theory-step > ul {
+  text-align: justify;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+  color: rgb(221, 221, 221);
+  padding: 20px 0px 0px 20px;
+  list-style: none;
+}
+
+.content > .theory > .theory-step > ul > label {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #638891;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+}
+
+.content > .theory > .theory-step > ul > li {
+  padding-bottom: 15px;
+}
+
+.visualizer {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 45px 20px 30px;
+  justify-content: center;
+  font-family: "Work Sans", sans-serif;
+  background-color: rgb(233, 233, 233);
+  border-radius: 5px;
+}
+
+.error {
+  background-color: rgba(255, 166, 0, 0.5);
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  display: none;
+  color: rgb(129, 0, 0);
+  font-weight: 600;
+}
+
+.container {
+  padding: 10px 50px 10px 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.container > div:first-child {
+  width: 20%;
+  color: rgb(0, 0, 0);
+  position: relative;
+  font-size: 16px;
+}
+
+.container > div:first-child > .buttons {
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+}
+
+.container > div:first-child > .buttons > div {
+  background-color: #5972d9;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 10px;
+}
+
+.container > div:first-child > .buttons > div:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(57, 10, 177, 0.2),
+    rgba(0, 0, 0, 0.2)
+  );
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container > div:first-child > div:not(:first-child) {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e0e0e0;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.container > div:first-child > .hp,
+.container > div:first-child > .lp {
+  display: flex;
+  align-items: center;
+}
+
+.container > div:first-child > .hp > input,
+.container > div:first-child > .lp > input {
+  margin: 5px 0px;
+  border: 1px solid #cecece;
+  border-radius: 0;
+  padding: 3px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  width: 50px;
+  display: flex;
+  border-radius: 5px;
+}
+
+.container > div:first-child > .hp > input:focus,
+.container > div:first-child > .lp > input:focus {
+  outline: none;
+  border: 2px solid #000000;
+}
+
+.container > div:first-child > div:not(:first-child) > span {
+  font-weight: 400;
+}
+
+.container > div:last-child {
+  width: 80%;
+  color: rgb(0, 0, 0);
+}
+
+.container > div:last-child > .add-process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.container > div:last-child > .add-process > .input {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container > div:last-child > .add-process > .input > div {
+  display: flex;
+  align-items: center;
+  margin: 0px 30px;
+}
+
+.container > div:last-child > .add-process > .input > div > label {
+  margin: 5px;
+  font-weight: 500;
+}
+
+.container > div:last-child > .add-process > .input > div > input {
+  margin: 5px 0px;
+  border: 1px solid #cecece;
+  border-radius: 0;
+  padding: 3px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  width: 130px;
+  display: flex;
+  border-radius: 5px;
+}
+
+.container > div:last-child > .add-process > .input > div > input:focus,
+.container > div:last-child > .add-process > .input > div > textarea:focus,
+.container > div:last-child > .add-process > .input > div > select:focus {
+  outline: none;
+  border: 1px solid #000000;
+}
+
+.container > div:last-child > .add-process > .add {
+  background-color: #099176;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 10px;
+  color: white;
+}
+
+.container > div:last-child > .add-process > .add:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(57, 10, 177, 0),
+    rgba(0, 0, 0, 0.2)
+  );
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.table {
+  color: black;
+  margin: 10px 10px 10px 10px;
+}
+
+.table > table {
+  width: 100%;
+}
+
+.table > table,
+th,
+td {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-collapse: collapse;
+}
+
+.table > table > thead > tr > th {
+  width: 9.5%;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.table > table > tbody > tr > td {
+  text-align: center;
+  padding: 5px;
+}
+
+.table > table > tbody > tr > td.del {
+  background-color: rgb(228, 27, 27);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.table > table > tbody > tr > td.del:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(57, 10, 177, 0.1),
+    rgba(0, 0, 0, 0.1)
+  );
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+#chart {
+  font-family: "Work Sans", sans-serif;
+}
+
+#container {
+  height: 500px;
+  margin: 0px 45px 20px 30px;
+  font-family: "Work Sans", sans-serif;
+  box-shadow: 0px 0px 5px 5px rgb(233, 233, 233);
+  border-radius: 5px;
+}

@@ -1,0 +1,313 @@
+h1{
+  color:blue;
+}
+
+p{
+  color: black;
+  font-size: 3rem;
+}
+
+button{
+  margin:10px;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.box2_heading{
+  color:blue;
+  font-size:1rem;
+}
+
+.box1{
+  text-align:center;
+  border:black solid 7px;
+  border-radius:8px;
+  width: 55%;
+  height: 200px;
+  margin-left:5%;
+  margin-top: 12px;
+  position:relative;
+}
+
+.box2{
+  text-align:center;
+  border:black solid 7px;
+  border-radius:8px;
+  height: 150px;
+  width:55%;
+  margin-left:5%;
+  margin-top: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.box3{
+    text-align:center;
+    border:black solid 7px;
+    border-radius:8px;
+    height: 150px;
+    width:55%;
+    margin-left:5%;
+    margin-top: 30px;
+    position: relative;
+    display: inline-block;
+}
+.box4{
+  text-align:center;
+  border:black solid 7px;
+  border-radius:8px;
+  width: 55%;
+  height: 150px;
+  margin-left:5%;
+  margin-top: 30px;
+  position:relative;
+}
+
+
+#P0{
+  border-radius:100%;
+  margin-left:100px;
+  position: absolute;
+  
+
+}
+
+
+#P1{
+  border-radius:100%;
+  margin-left:700px;
+  position: absolute;
+}
+
+#P1,#P0{
+  position: absolute;
+    left: 0px;
+    top: 342px;
+    width: 77px;
+  transition-duration: 2s;
+  
+}
+#a1{
+  position: absolute;
+  right: 5%;
+  margin-top: 60px;
+}
+#a2{
+  position: absolute;
+  right: 5%;
+  margin-top: 400px;
+}
+body{
+  background-color: #eeeeee;
+}
+input{
+  background-color: transparent;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/*
+.End-process0{
+  z-index:1;
+  position:absolute;
+  display: inline-block;
+  margin-left:auto;
+}
+
+
+.End-process1{
+  position:absolute;
+  display: inline-block;
+} */
+ /* for navbar styles */
+ @import url("https://fonts.googleapis.com/css?family=Montserrat:200&display=swap");
+
+ a {
+   text-decoration: none;
+   color: #fff;
+ }
+ .nav {
+   background: rgba(0, 0, 0, 0.87);
+   padding: 15px 0;
+   padding-top: 7px;
+   padding-bottom: 5px;
+   margin-top: -150px;
+   margin-left: -300px;
+   margin-right: -8.2px;
+   margin-bottom: 149px;
+ }
+ .nav:after {
+   display: block;
+   content: "";
+   clear: right;
+ }
+ .container {
+   /* width: calc(100% - 200px); */
+ }
+ .brand-logo {
+   color: #fff;
+   font-size: 20px;
+   margin-top: 100px;
+   margin-left: 20px;
+ }
+ input[type="checkbox"] {
+   display: none;
+ }
+ .menu {
+   margin: 4px;
+   padding: 5px;
+   border: 1px #fff solid;
+   position: absolute;
+   font-size: 12px;
+   color: #fff;
+   top: 10px;
+   left: 10px;
+   background: none;
+   text-transform: capitalize;
+   outline: none;
+   display: none;
+ }
+ ul {
+   float: right;
+   font-size: 0;
+ }
+ li {
+   display: inline-block;
+   font-size: 20px;
+   margin: 0 10px;
+   text-transform: capitalize;
+   color: #fff;
+   padding: 5px 0;
+ }
+ li:first-child {
+   margin-left: 0;
+ }
+ li:last-child {
+   margin-right: 0;
+ }
+ .services {
+   cursor: pointer;
+   padding-right: 5px;
+ }
+ .services:hover .services-dropdown {
+   display: block;
+   color: black;
+   cursor: pointer;
+ }
+ .services-dropdown {
+   display: none;
+   max-width: 200px;
+   position: absolute;
+   background: #f4f4f4;
+ }
+ .services-dropdown a {
+   display: block;
+   color: #000;
+   padding: 10px 15px;
+   font-size: 18px;
+ }
+ .services-dropdown a:hover {
+   background: #dcdcdc;
+ }
+ li input[type="text"] {
+   height: 20px;
+   padding: 7px 15px;
+   font-size: 15px;
+   background: #fff;
+   border: none;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+ }
+ .fa-search {
+   background: white;
+   color: #4a4a4a;
+   padding: 10px;
+   vertical-align: middle;
+   border: none;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+   font-size: 14px;
+ }
+ li input[type="text"]:focus {
+   outline: none;
+ }
+ .hover:after {
+   display: block;
+   content: "";
+   border-bottom: 2px solid #fff;
+   transform: scaleX(0);
+   transition: transform ease-in 200ms;
+ }
+ .hover:hover:after {
+   transform: scaleX(1);
+ }
+ 
+ @media screen and (max-width: 1024px) {
+   .brand-logo {
+     font-size: 20px;
+     margin-left: 100px;
+   }
+   li {
+     font-size: 15px;
+     padding: 0;
+   }
+   .container {
+     width: calc(100% - 100px);
+   }
+   li input[type="text"] {
+     height: 12px;
+     font-size: 12px;
+   }
+   .fa-search {
+     font-size: 8px;
+     padding: 9px;
+     vertical-align: top;
+   }
+   .services-dropdown a {
+     font-size: 11px;
+   }
+ }
+ @media screen and (max-width: 768px) {
+   .container {
+     width: calc(100% - 40px);
+   }
+   .brand-logo {
+     display: block;
+     text-align: center;
+     font-size: 1px;
+     margin-left: 20px;
+   }
+   ul {
+     display: none;
+     float: none;
+     text-align: center;
+   }
+   .fa-search {
+     font-size: 8px;
+     padding: 9px;
+     vertical-align: top;
+   }
+   .menu {
+     display: block;
+   }
+   .menu-toggle:checked ~ ul {
+     display: block;
+   }
+   li {
+     margin: 10px;
+     padding: 0;
+   }
+   li:last-child {
+     display: block;
+   }
+ }
+ @media screen and (max-width: 428px) {
+   li {
+     font-size: 12px;
+   }
+   .fa-search {
+     font-size: 8px;
+     padding: 9px;
+     vertical-align: top;
+   }
+ }
