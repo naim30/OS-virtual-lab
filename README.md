@@ -22,3 +22,11 @@ You can visualise and play with the 9 sheduling algorithm on this website.
 7. Priority Preemptive
 8. Priority Non-Preemptive
 9. Highest Response Ratio Next
+
+## Contribution from
+
+Naimish Lukhi
+Siddharth Patel
+Dhruvil Lathiya
+Amit Hirpara
+Parva Barot
