@@ -56,7 +56,11 @@ body {
   width: 20%;
 }
 
-.nav > div > .button > div {
+.nav > div > .button > a {
+  text-decoration: none;
+}
+
+.nav > div > .button > a > div {
   z-index: 1;
   border: 1px solid black;
   color: black;
@@ -67,7 +71,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-.nav > div > .button > div:hover {
+.nav > div > .button > a > div:hover {
   animation: textcolor;
   animation-duration: 300ms;
   animation-fill-mode: forwards;
@@ -91,7 +95,7 @@ body {
   }
 }
 
-.nav > div > .button > div::before {
+.nav > div > .button > a > div::before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -105,8 +109,8 @@ body {
   transition: transform 300ms ease-in-out;
 }
 
-.nav > div > .button > div:hover::before,
-.nav > div > .button > div:focus::before {
+.nav > div > .button > a > div:hover::before,
+.nav > div > .button > a > div:focus::before {
   transform: scaleX(1);
 }
 
