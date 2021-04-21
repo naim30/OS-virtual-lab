@@ -48,7 +48,7 @@ step 2: Clone the Fork repository in your device
 git clone https://github.com/<your-github-username>/OS-virtual-lab.git
 ```
 
-Now you are god to go.
+Now you are good to go.
 
 ## Contribution from
 
