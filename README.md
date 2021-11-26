@@ -39,6 +39,17 @@ You can visualize and play with the all 9 sheduling algorithm on this website.
 8. Priority Non-Preemptive
 9. Highest Response Ratio Next
 
+### Page Replacement Algo :
+
+You can visualize and play with the different algorithms of Deadlock and Concurrency.
+
+1. First in first out
+2. Least recently used
+3. Optimal algo
+4. Most recent used
+5. Last in first out
+6. Random
+
 ## Get started
 
 step 1: Fork repository\
@@ -67,3 +78,14 @@ Siddharth Patel,
 Dhruvil Lathiya,
 Amit Hirpara,
 Parva Barot
+
+### For Page Replacement Algorithms :
+
+Divya Patel,
+Jainil Shah,
+Dheesh Suthariya,
+Aman Narayana,
+Bhargav Ghelani,
+Dhrupad Chauhan
+
+
